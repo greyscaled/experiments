@@ -1,0 +1,7 @@
+arrowParens: always
+printWidth: 80
+proseWrap: always
+semi: false
+singleQuote: false
+tabWidth: 4
+useTabs: false
