@@ -8,7 +8,8 @@
         "noEmit": true,
         "skipLibCheck": true,
         "strict": true,
-        "target": "ESNext"
+        "target": "ESNext",
+        "useDefineForClassFields": true
     },
     "include": ["src"]
 }
