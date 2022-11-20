@@ -5,15 +5,15 @@ body {
 }
 
 #app {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    min-height: 500px;
-    min-width: 500px;
+    justify-content: center;
     overflow: hidden;
     width: 100vw;
 }
 
 #canvas {
     background-color: black;
-    height: inherit;
-    width: inherit;
 }
