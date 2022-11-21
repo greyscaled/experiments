@@ -8,7 +8,7 @@ const createShape = (ctx: CanvasRenderingContext2D): Coordinate[] => {
 
     for (let i = 1; i < path.length; i++) {
         const endCoord = path[i]
-        const startCoord = path[0]
+        const startCoord = path[i - 1]
         drawLine(ctx, startCoord.x, startCoord.y, endCoord.x, endCoord.y)
     }
 
