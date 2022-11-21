@@ -1,5 +1,6 @@
-import getCanvas from "./getCanvas"
-import phaseMachine from "./phaseMachine"
+import getCanvas from "./canvas/getCanvas"
+import controllerFSM from "./controller/controller"
 import "./style.css"
 
-phaseMachine(getCanvas())
+console.debug("starting main")
+controllerFSM(getCanvas())

@@ -58,4 +58,10 @@ const getCoordinates = (): Coordinate[][] => {
     return coordinates
 }
 
+export const getRandCoordinate = (coords: Coordinate[][]) => {
+    const y = Math.floor(Math.random() * (coords.length - 1))
+    const x = Math.floor(Math.random() * (coords[y].length - 1))
+    return coords[y][x]
+}
+
 export default getCoordinates

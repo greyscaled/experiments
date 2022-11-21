@@ -1,8 +1,7 @@
-import { Coordinate } from "./getCoordinates"
-
 const drawCircle = (
     ctx: CanvasRenderingContext2D,
-    coords: Coordinate,
+    x: number,
+    y: number,
     fillStyle: string | CanvasGradient | CanvasPattern = "white",
     strokeStyle: string | CanvasGradient | CanvasPattern = "white"
 ): void => {
@@ -14,8 +13,7 @@ const drawCircle = (
     ctx.fillStyle = fillStyle
     ctx.strokeStyle = strokeStyle
 
-    const { x, y } = coords
-
+    // Path
     ctx.beginPath()
     ctx.arc(x, y, 2.5, 0, 2 * Math.PI)
     ctx.stroke()

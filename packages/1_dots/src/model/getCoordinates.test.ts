@@ -1,4 +1,10 @@
-import getCoordinates, { Coordinate } from "./getCoordinates"
+import getCoordinates, {
+    CANVAS_HEIGHT,
+    CANVAS_WIDTH,
+    Coordinate,
+    DELTA,
+    getRandCoordinate,
+} from "./getCoordinates"
 
 describe("getCoordinates", () => {
     it("returns expected coordinates", () => {
@@ -44,5 +50,19 @@ describe("getCoordinates", () => {
         expect(got.length).toBe(expectedLength)
         expect(got[0]).toEqual(expectedFirstRow)
         expect(got[got.length - 1]).toEqual(expectedLastRow)
+    })
+
+    describe("getRandCoordinate", () => {
+        it("returns a valid coordinate", () => {
+            for (let i = 0; i < 100; i++) {
+                const got = getRandCoordinate(getCoordinates())
+                expect(got.x % DELTA).toBe(0)
+                expect(got.x).toBeGreaterThanOrEqual(DELTA)
+                expect(got.x).toBeLessThanOrEqual(CANVAS_WIDTH - DELTA)
+                expect(got.y % DELTA).toBe(0)
+                expect(got.y).toBeGreaterThanOrEqual(DELTA)
+                expect(got.y).toBeLessThanOrEqual(CANVAS_HEIGHT - DELTA)
+            }
+        })
     })
 })
