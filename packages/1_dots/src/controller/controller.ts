@@ -62,7 +62,7 @@ const controllerFSM = async (ctx: CanvasRenderingContext2D): Promise<void> => {
     while (true) {
         const fn = stateFns[ctrlCtx.phase]
         console.debug("await delay")
-        await delayedExec(fn, 500, 5000)
+        await delayedExec(fn, 200, 1000)
         ctrlCtx.phase = Transitions[ctrlCtx.phase]
     }
 }
