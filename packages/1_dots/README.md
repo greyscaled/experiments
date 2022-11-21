@@ -1,6 +1,8 @@
 # 1 Dots
 
-Created on: 2022-11-18
+Conceived on: 2022-11-18
+
+![demo](demo.gif)
 
 ## Description
 
