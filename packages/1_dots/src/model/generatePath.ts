@@ -82,7 +82,7 @@ const generatePath = (): Coordinate[] => {
     const path = [startCoord]
 
     let currentCoord = startCoord
-    for (let move = 0; move < rng(20, 100); move++) {
+    for (let move = 0; move < rng(3, 20); move++) {
         currentCoord = nextCoord(currentCoord)
         path.push(currentCoord)
     }
