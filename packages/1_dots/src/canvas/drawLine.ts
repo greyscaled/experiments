@@ -15,6 +15,7 @@ const drawLine = (
     ctx.beginPath()
     ctx.moveTo(startX, startY)
     ctx.lineTo(endX, endY)
+    ctx.closePath()
     ctx.stroke()
 
     // Restore Styles
