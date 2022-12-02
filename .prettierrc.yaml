@@ -5,3 +5,8 @@ semi: false
 singleQuote: false
 tabWidth: 4
 useTabs: false
+
+overrides:
+    - files: ["*.md"]
+      options:
+          tabWidth: 2
