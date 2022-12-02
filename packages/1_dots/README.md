@@ -82,3 +82,20 @@ should include non-linear fades, flashes of light for reveals.
 
 In terms of ambience, there could be things happening around the canvas in the
 background, perhaps. Or at least a non-blank background. This is TBD.
+
+## Alternatives
+
+Some of these may be discarded, implemented or broken out into separate
+packages.
+
+### Red
+
+I have had some visions of playing with shades of red, perhaps connecting each
+node in the path to the origin with a red line. The motivation here is making it
+ominous.
+
+### Light Show
+
+It might be interesting to use path-walking for a light source. Each node in the
+path would be the focus of the light source, and as it moves from node to node
+there's some interesting animations with shadows etc.
