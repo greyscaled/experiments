@@ -703,6 +703,18 @@
   dependencies:
     "@types/yargs-parser" "*"
 
+"@vapurrmaid/markov-chain@^0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@vapurrmaid/markov-chain/-/markov-chain-0.4.2.tgz#38a520074c9c48d639e09c757dc7950205d5e1d9"
+  integrity sha512-FUcK/lPCHnKdQu74B4CdqyrW5FILeYjjHVN5D3CLpXZwC4Mk+lbyJPibSWgjAoJZvj2NkYbDjTSMCLmGGyDjjQ==
+  dependencies:
+    "@vapurrmaid/validate" "^1.0.0-beta.0"
+
+"@vapurrmaid/validate@^1.0.0-beta.0":
+  version "1.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@vapurrmaid/validate/-/validate-1.0.0-beta.0.tgz#fa874aa101242a72a275ce8af78ac6fbea5b14f5"
+  integrity sha512-2w9s1qL+0Az7PzidxER29NNxCXpasfRZHsVcQuiRxoVKcisddnkFEZG7bJR0YOEkhfLtQ1776GehP1HdYua2EQ==
+
 acorn-walk@^8.1.1:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/acorn-walk/-/acorn-walk-8.2.0.tgz#741210f2e2426454508853a2f44d0ab83b7f69c1"
