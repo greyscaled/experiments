@@ -1,6 +1,16 @@
 import rng from "../util/rng"
 
 /**
+ * CANVAS_WIDTH is the fixed width of the canvas
+ */
+export const CANVAS_WIDTH = 300
+
+/**
+ * CANVAS_HEIGHT is the fixed height of the canvas
+ */
+export const CANVAS_HEIGHT = 500
+
+/**
  * Coordinate is a point in 2D space; there is an x and y value. While this
  * interface is agnostic of planes and grids, it's worth noting that the origin
  * (0, 0) of a canvas is top left, and both x and y values are positive.

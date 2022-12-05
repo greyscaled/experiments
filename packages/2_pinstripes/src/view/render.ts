@@ -1,9 +1,9 @@
 import clearArea from "../canvas/clearArea"
 import drawLine from "../canvas/drawLine"
-import getVectors, { X_MAX, Y_MAX } from "../model/getVectors"
+import getVectors, { CANVAS_HEIGHT, CANVAS_WIDTH } from "../model/getVectors"
 
 const render = (ctx: CanvasRenderingContext2D): void => {
-    clearArea(ctx, X_MAX, Y_MAX)
+    clearArea(ctx, CANVAS_WIDTH, CANVAS_HEIGHT)
 
     getVectors().forEach((vector) => {
         const secondLastIdx = vector.length - 2

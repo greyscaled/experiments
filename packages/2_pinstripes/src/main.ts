@@ -1,22 +1,19 @@
 import getCanvas from "./canvas/getCanvas"
+import smoothDynamicClock, { ClockEventType } from "./model/smoothDynamicClock"
 import "./style.css"
 import render from "./view/render"
 
 console.debug("starting main")
 const ctx = getCanvas()
 
-const updateTick = (tick: number): number => {
-    return (tick + 1) % 10
+const handleClockEvent = () => {
+    console.debug("handleClockEvent")
+    render(ctx)
 }
+window.addEventListener(ClockEventType, handleClockEvent as EventListener)
 
-let tick = 0
-const update = () => {
-    tick = updateTick(tick)
-    if (tick === 0) {
-        render(ctx)
-    }
-    window.requestAnimationFrame(update)
-}
-
+// render at the start
 render(ctx)
-window.requestAnimationFrame(update)
+
+// start the clock
+smoothDynamicClock()
