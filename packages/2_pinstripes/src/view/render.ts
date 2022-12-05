@@ -51,9 +51,8 @@ const render = (ctx: CanvasRenderingContext2D, orb: Orb): void => {
     clearArea(ctx, CANVAS_WIDTH, CANVAS_HEIGHT)
 
     const orbPos = orb.getPosition()
-    const fill = orb.getMode() === "distortion" ? undefined : "black"
 
-    drawCircle(ctx, orbPos.x, orbPos.y, orb.getRadius(), fill)
+    drawCircle(ctx, orbPos.x, orbPos.y, orb.getRadius() * 0.4)
 
     getVectors().forEach((vector) => {
         const secondLastIdx = vector.length - 2
