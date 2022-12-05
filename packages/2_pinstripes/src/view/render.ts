@@ -1,12 +1,13 @@
 import clearArea from "../canvas/clearArea"
 import drawLine from "../canvas/drawLine"
-import getVectors from "../model/getVectors"
+import getVectors, { X_MAX, Y_MAX } from "../model/getVectors"
 
 const render = (ctx: CanvasRenderingContext2D): void => {
-    clearArea(ctx, 300, 500)
-    const vectors = getVectors()
-    vectors.forEach((vector) => {
+    clearArea(ctx, X_MAX, Y_MAX)
+
+    getVectors().forEach((vector) => {
         const secondLastIdx = vector.length - 2
+
         for (let i = 0; i < secondLastIdx; i++) {
             // draw a line from current (ith) idx to i + 1
             const c1 = vector[i]

@@ -13,34 +13,34 @@ export interface Coordinate {
 /**
  * X_MIN is the minimum x value for any coordinate
  */
-const X_MIN = 5
+export const X_MIN = 5
 
 /**
  * X_MAX is the maximum x value for any coordinate
  */
-const X_MAX = 295
+export const X_MAX = 295
 
 /**
  * Y_MIN is the minimum y value for any coordinate
  */
-const Y_MIN = 0
+export const Y_MIN = 0
 
 /**
  * Y_MAX is the maximum y value for any coordinate
  */
-const Y_MAX = 500
+export const Y_MAX = 500
 
 /**
  * X_DELTA is the distance from x0 to x1 for a pair of adjacenet coordinates in
  * the x direction (ie: horizontal)
  */
-const X_DELTA = 10
+export const X_DELTA = 10
 
 /**
  * Y_DELTA is the distance from y0 to y1 for a pair of adjacent
  * coordinates in the y direction (ie: vertical)
  */
-const Y_DELTA = 5
+export const Y_DELTA = 5
 
 /**
  * getVectors returns a set of "Y-Vectors". Each vector is a set of co-ordinates
@@ -63,7 +63,10 @@ const getVectors = (): Coordinate[][] => {
         vectors.push([])
 
         for (let y = Y_MIN; y <= Y_MAX; y += Y_DELTA) {
-            const xWithNoise = rng(Math.max(0, x - 1), x + 1)
+            const xWithNoise = rng(
+                Math.max(X_MIN, x - 1),
+                Math.min(X_MAX, x + 1)
+            )
             vectors[i].push({ x: xWithNoise, y })
         }
 

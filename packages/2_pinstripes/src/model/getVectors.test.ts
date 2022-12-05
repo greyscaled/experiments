@@ -1,9 +1,9 @@
-import getVectors, { Coordinate } from "./getVectors"
+import getVectors, { X_MAX, X_MIN } from "./getVectors"
 
 describe("getVectors", () => {
     it("has the correct length", () => {
         // Given
-        const expectedLength = 295 / 5
+        const expectedLength = 30
 
         // When
         const gotLength = getVectors().length
@@ -12,239 +12,32 @@ describe("getVectors", () => {
         expect(gotLength).toBe(expectedLength)
     })
 
-    it("has the correct first vector", () => {
+    it("has the correct first and last vector", () => {
         // Given
-        const expectedVector: Coordinate[] = [
-            { x: 5, y: 0 },
-            { x: 5, y: 5 },
-            { x: 5, y: 10 },
-            { x: 5, y: 15 },
-            { x: 5, y: 20 },
-            { x: 5, y: 25 },
-            { x: 5, y: 30 },
-            { x: 5, y: 35 },
-            { x: 5, y: 40 },
-            { x: 5, y: 45 },
-            { x: 5, y: 50 },
-            { x: 5, y: 55 },
-            { x: 5, y: 60 },
-            { x: 5, y: 65 },
-            { x: 5, y: 70 },
-            { x: 5, y: 75 },
-            { x: 5, y: 80 },
-            { x: 5, y: 85 },
-            { x: 5, y: 90 },
-            { x: 5, y: 95 },
-
-            { x: 5, y: 100 },
-            { x: 5, y: 105 },
-            { x: 5, y: 110 },
-            { x: 5, y: 115 },
-            { x: 5, y: 120 },
-            { x: 5, y: 125 },
-            { x: 5, y: 130 },
-            { x: 5, y: 135 },
-            { x: 5, y: 140 },
-            { x: 5, y: 145 },
-            { x: 5, y: 150 },
-            { x: 5, y: 155 },
-            { x: 5, y: 160 },
-            { x: 5, y: 165 },
-            { x: 5, y: 170 },
-            { x: 5, y: 175 },
-            { x: 5, y: 180 },
-            { x: 5, y: 185 },
-            { x: 5, y: 190 },
-            { x: 5, y: 195 },
-
-            { x: 5, y: 200 },
-            { x: 5, y: 205 },
-            { x: 5, y: 210 },
-            { x: 5, y: 215 },
-            { x: 5, y: 220 },
-            { x: 5, y: 225 },
-            { x: 5, y: 230 },
-            { x: 5, y: 235 },
-            { x: 5, y: 240 },
-            { x: 5, y: 245 },
-            { x: 5, y: 250 },
-            { x: 5, y: 255 },
-            { x: 5, y: 260 },
-            { x: 5, y: 265 },
-            { x: 5, y: 270 },
-            { x: 5, y: 275 },
-            { x: 5, y: 280 },
-            { x: 5, y: 285 },
-            { x: 5, y: 290 },
-            { x: 5, y: 295 },
-
-            { x: 5, y: 300 },
-            { x: 5, y: 305 },
-            { x: 5, y: 310 },
-            { x: 5, y: 315 },
-            { x: 5, y: 320 },
-            { x: 5, y: 325 },
-            { x: 5, y: 330 },
-            { x: 5, y: 335 },
-            { x: 5, y: 340 },
-            { x: 5, y: 345 },
-            { x: 5, y: 350 },
-            { x: 5, y: 355 },
-            { x: 5, y: 360 },
-            { x: 5, y: 365 },
-            { x: 5, y: 370 },
-            { x: 5, y: 375 },
-            { x: 5, y: 380 },
-            { x: 5, y: 385 },
-            { x: 5, y: 390 },
-            { x: 5, y: 395 },
-
-            { x: 5, y: 400 },
-            { x: 5, y: 405 },
-            { x: 5, y: 410 },
-            { x: 5, y: 415 },
-            { x: 5, y: 420 },
-            { x: 5, y: 425 },
-            { x: 5, y: 430 },
-            { x: 5, y: 435 },
-            { x: 5, y: 440 },
-            { x: 5, y: 445 },
-            { x: 5, y: 450 },
-            { x: 5, y: 455 },
-            { x: 5, y: 460 },
-            { x: 5, y: 465 },
-            { x: 5, y: 470 },
-            { x: 5, y: 475 },
-            { x: 5, y: 480 },
-            { x: 5, y: 485 },
-            { x: 5, y: 490 },
-            { x: 5, y: 495 },
-
-            { x: 5, y: 500 },
-        ]
-
-        // When
-        const gotVector = getVectors()[0]
-
-        expect(gotVector).toEqual(expectedVector)
-    })
-
-    it("has the correct last vector", () => {
-        // Given
-        const expectedVector: Coordinate[] = [
-            { x: 295, y: 0 },
-            { x: 295, y: 5 },
-            { x: 295, y: 10 },
-            { x: 295, y: 15 },
-            { x: 295, y: 20 },
-            { x: 295, y: 25 },
-            { x: 295, y: 30 },
-            { x: 295, y: 35 },
-            { x: 295, y: 40 },
-            { x: 295, y: 45 },
-            { x: 295, y: 50 },
-            { x: 295, y: 55 },
-            { x: 295, y: 60 },
-            { x: 295, y: 65 },
-            { x: 295, y: 70 },
-            { x: 295, y: 75 },
-            { x: 295, y: 80 },
-            { x: 295, y: 85 },
-            { x: 295, y: 90 },
-            { x: 295, y: 95 },
-
-            { x: 295, y: 100 },
-            { x: 295, y: 105 },
-            { x: 295, y: 110 },
-            { x: 295, y: 115 },
-            { x: 295, y: 120 },
-            { x: 295, y: 125 },
-            { x: 295, y: 130 },
-            { x: 295, y: 135 },
-            { x: 295, y: 140 },
-            { x: 295, y: 145 },
-            { x: 295, y: 150 },
-            { x: 295, y: 155 },
-            { x: 295, y: 160 },
-            { x: 295, y: 165 },
-            { x: 295, y: 170 },
-            { x: 295, y: 175 },
-            { x: 295, y: 180 },
-            { x: 295, y: 185 },
-            { x: 295, y: 190 },
-            { x: 295, y: 195 },
-
-            { x: 295, y: 200 },
-            { x: 295, y: 205 },
-            { x: 295, y: 210 },
-            { x: 295, y: 215 },
-            { x: 295, y: 220 },
-            { x: 295, y: 225 },
-            { x: 295, y: 230 },
-            { x: 295, y: 235 },
-            { x: 295, y: 240 },
-            { x: 295, y: 245 },
-            { x: 295, y: 250 },
-            { x: 295, y: 255 },
-            { x: 295, y: 260 },
-            { x: 295, y: 265 },
-            { x: 295, y: 270 },
-            { x: 295, y: 275 },
-            { x: 295, y: 280 },
-            { x: 295, y: 285 },
-            { x: 295, y: 290 },
-            { x: 295, y: 295 },
-
-            { x: 295, y: 300 },
-            { x: 295, y: 305 },
-            { x: 295, y: 310 },
-            { x: 295, y: 315 },
-            { x: 295, y: 320 },
-            { x: 295, y: 325 },
-            { x: 295, y: 330 },
-            { x: 295, y: 335 },
-            { x: 295, y: 340 },
-            { x: 295, y: 345 },
-            { x: 295, y: 350 },
-            { x: 295, y: 355 },
-            { x: 295, y: 360 },
-            { x: 295, y: 365 },
-            { x: 295, y: 370 },
-            { x: 295, y: 375 },
-            { x: 295, y: 380 },
-            { x: 295, y: 385 },
-            { x: 295, y: 390 },
-            { x: 295, y: 395 },
-
-            { x: 295, y: 400 },
-            { x: 295, y: 405 },
-            { x: 295, y: 410 },
-            { x: 295, y: 415 },
-            { x: 295, y: 420 },
-            { x: 295, y: 425 },
-            { x: 295, y: 430 },
-            { x: 295, y: 435 },
-            { x: 295, y: 440 },
-            { x: 295, y: 445 },
-            { x: 295, y: 450 },
-            { x: 295, y: 455 },
-            { x: 295, y: 460 },
-            { x: 295, y: 465 },
-            { x: 295, y: 470 },
-            { x: 295, y: 475 },
-            { x: 295, y: 480 },
-            { x: 295, y: 485 },
-            { x: 295, y: 490 },
-            { x: 295, y: 495 },
-
-            { x: 295, y: 500 },
+        const expectedY = [
+            0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80,
+            85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150,
+            155, 160, 165, 170, 175, 180, 185, 190, 195, 200, 205, 210, 215,
+            220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280,
+            285, 290, 295, 300, 305, 310, 315, 320, 325, 330, 335, 340, 345,
+            350, 355, 360, 365, 370, 375, 380, 385, 390, 395, 400, 405, 410,
+            415, 420, 425, 430, 435, 440, 445, 450, 455, 460, 465, 470, 475,
+            480, 485, 490, 495, 500,
         ]
 
         // When
         const vectors = getVectors()
-        const gotVector = vectors[vectors.length - 1]
+        const gotFirstVector = vectors[0]
+        const gotLastVector = vectors[vectors.length - 1]
 
-        // Then
-        expect(gotVector).toEqual(expectedVector)
+        for (let i = 0; i < gotFirstVector.length; i++) {
+            // Then
+            expect(gotFirstVector[i].x).toBeGreaterThanOrEqual(X_MIN)
+            expect(gotFirstVector[i].x).toBeLessThanOrEqual(X_MIN + 1)
+            expect(gotFirstVector[i].y).toBe(expectedY[i])
+            expect(gotLastVector[i].x).toBeGreaterThanOrEqual(X_MAX - 1)
+            expect(gotLastVector[i].x).toBeLessThanOrEqual(X_MAX)
+            expect(gotLastVector[i].y).toBe(expectedY[i])
+        }
     })
 })
