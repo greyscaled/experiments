@@ -1,7 +1,7 @@
 /**
  * shuffleArray
  */
-const shuffleArray = <T>(arr: Array<T>) => {
+const shuffleArray = <T>(arr: T[]) => {
     let currentIndex = arr.length
     let randomIndex = -1
 

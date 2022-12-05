@@ -1,7 +1,8 @@
 # Recipes
 
-Not all projects are meant to be written in the same languages and frameworks (etc).
-However, projects sharing common elements may rely on some recipes documented here.
+Not all projects are meant to be written in the same languages and frameworks
+(etc). However, projects sharing common elements may rely on some recipes
+documented here.
 
 ## Vite - Vanilla TS
 

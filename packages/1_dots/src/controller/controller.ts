@@ -1,9 +1,9 @@
+import { Coordinate } from "../model/getCoordinates"
 import delayedExec from "../util/delayExec"
-import resetGrid from "./operations/resetGrid"
 import createGridOperation from "./operations/createGrid"
 import createShapeOperation from "./operations/createShape"
 import emphasizeShapeOperation from "./operations/emphasizeShape"
-import { Coordinate } from "../model/getCoordinates"
+import resetGrid from "./operations/resetGrid"
 
 /**
  * State represents each state of the FSM
@@ -58,7 +58,7 @@ const controllerFSM = async (ctx: CanvasRenderingContext2D): Promise<void> => {
 
     const stateFns = stateFnFactory(ctx, ctrlCtx)
 
-    // eslint-disable-next-line no-constant-condition
+    // eslint-disable-next-line no-constant-condition, @typescript-eslint/no-unnecessary-condition
     while (true) {
         const fn = stateFns[ctrlCtx.phase]
         console.debug("await delay")

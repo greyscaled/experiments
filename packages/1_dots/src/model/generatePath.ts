@@ -1,3 +1,5 @@
+import rng from "../util/rng"
+import shuffleArray from "../util/shuffleArray"
 import getCoordinates, {
     CANVAS_HEIGHT,
     CANVAS_WIDTH,
@@ -5,8 +7,6 @@ import getCoordinates, {
     DELTA,
     getRandCoordinate,
 } from "./getCoordinates"
-import shuffleArray from "../util/shuffleArray"
-import rng from "../util/rng"
 
 export const nextCoord = (start: Coordinate): Coordinate => {
     // There are 8 possible directions from the start position.
@@ -61,7 +61,9 @@ export const nextCoord = (start: Coordinate): Coordinate => {
 
         if (!possibility) {
             // Theoretically impossible, just to appease TypeScript
-            throw new Error(`nextCoord not possible from: ${start}`)
+            throw new Error(
+                `nextCoord not possible from: (${start.x}, ${start.y})`
+            )
         }
 
         if (
@@ -74,7 +76,7 @@ export const nextCoord = (start: Coordinate): Coordinate => {
         }
     }
 
-    throw new Error(`nextCoord not possible from: ${start}`)
+    throw new Error(`nextCoord not possible from: (${start.x}, ${start.y})`)
 }
 
 const generatePath = (): Coordinate[] => {
